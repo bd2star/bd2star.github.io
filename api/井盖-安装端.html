@@ -7,7 +7,7 @@
     <meta name="description" content="To be or not to be,that&#39;s a question.">
     <link rel="icon" href="/img/logo.ico">
     
-    <link rel="preload" href="/assets/css/0.styles.b473d3ab.css" as="style"><link rel="preload" href="/assets/js/app.50c0b732.js" as="script"><link rel="preload" href="/assets/js/8.6a19c462.js" as="script"><link rel="prefetch" href="/assets/js/10.3e7c0320.js"><link rel="prefetch" href="/assets/js/11.e0c1bef0.js"><link rel="prefetch" href="/assets/js/12.c6c33949.js"><link rel="prefetch" href="/assets/js/13.ab2d5b77.js"><link rel="prefetch" href="/assets/js/14.751fec65.js"><link rel="prefetch" href="/assets/js/15.b9f63476.js"><link rel="prefetch" href="/assets/js/16.0291ae27.js"><link rel="prefetch" href="/assets/js/17.eaad913e.js"><link rel="prefetch" href="/assets/js/18.247082d0.js"><link rel="prefetch" href="/assets/js/19.d01844a7.js"><link rel="prefetch" href="/assets/js/2.9385f316.js"><link rel="prefetch" href="/assets/js/20.7fafd066.js"><link rel="prefetch" href="/assets/js/21.68c4a21c.js"><link rel="prefetch" href="/assets/js/22.5d059e82.js"><link rel="prefetch" href="/assets/js/23.b050b19c.js"><link rel="prefetch" href="/assets/js/3.3634c57c.js"><link rel="prefetch" href="/assets/js/4.639cc120.js"><link rel="prefetch" href="/assets/js/5.7fe36924.js"><link rel="prefetch" href="/assets/js/6.36639c03.js"><link rel="prefetch" href="/assets/js/7.f10e3abb.js"><link rel="prefetch" href="/assets/js/9.398a8877.js">
+    <link rel="preload" href="/assets/css/0.styles.b473d3ab.css" as="style"><link rel="preload" href="/assets/js/app.37fa9954.js" as="script"><link rel="preload" href="/assets/js/8.0c860a1d.js" as="script"><link rel="prefetch" href="/assets/js/10.086c3b58.js"><link rel="prefetch" href="/assets/js/11.e0c1bef0.js"><link rel="prefetch" href="/assets/js/12.c6c33949.js"><link rel="prefetch" href="/assets/js/13.ab2d5b77.js"><link rel="prefetch" href="/assets/js/14.751fec65.js"><link rel="prefetch" href="/assets/js/15.b9f63476.js"><link rel="prefetch" href="/assets/js/16.0291ae27.js"><link rel="prefetch" href="/assets/js/17.eaad913e.js"><link rel="prefetch" href="/assets/js/18.247082d0.js"><link rel="prefetch" href="/assets/js/19.d01844a7.js"><link rel="prefetch" href="/assets/js/2.9385f316.js"><link rel="prefetch" href="/assets/js/20.7fafd066.js"><link rel="prefetch" href="/assets/js/21.68c4a21c.js"><link rel="prefetch" href="/assets/js/22.5d059e82.js"><link rel="prefetch" href="/assets/js/23.b050b19c.js"><link rel="prefetch" href="/assets/js/3.3634c57c.js"><link rel="prefetch" href="/assets/js/4.639cc120.js"><link rel="prefetch" href="/assets/js/5.7fe36924.js"><link rel="prefetch" href="/assets/js/6.36639c03.js"><link rel="prefetch" href="/assets/js/7.f10e3abb.js"><link rel="prefetch" href="/assets/js/9.62563721.js">
     <link rel="stylesheet" href="/assets/css/0.styles.b473d3ab.css">
   </head>
   <body>
@@ -69,27 +69,62 @@
     <span class="token punctuation">}</span><span class="token punctuation">,</span>
     url<span class="token operator">:</span> <span class="token null">null</span>
 <span class="token punctuation">}</span>
-</code></pre></div><h3 id="安装人员选择井盖类型的接口"><a href="#安装人员选择井盖类型的接口" aria-hidden="true" class="header-anchor">#</a> 安装人员选择井盖类型的接口</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p>http://192.168.0.103:8082/wellLid/app/install/findWellLidType.do</p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li>请求参数</li></ul> <blockquote><p>无</p></blockquote> <ul><li>响应参数</li></ul> <table><thead><tr><th>参数</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>type</td> <td>String</td> <td>井盖类型</td></tr> <tr><td>value</td> <td>String</td> <td>井盖类型的值</td></tr> <tr><td>code</td> <td>String</td> <td>0000表示成功</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>   <span class="token punctuation">{</span>
-   	content<span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
-   	code<span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
-   	result<span class="token operator">:</span> <span class="token punctuation">{</span>
-   		list<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-   				type<span class="token operator">:</span> <span class="token string">&quot;燃气&quot;</span><span class="token punctuation">,</span>
-   				value<span class="token operator">:</span> <span class="token string">&quot;1&quot;</span>
-   			<span class="token punctuation">}</span><span class="token punctuation">,</span>
-   			<span class="token punctuation">{</span>
-   				type<span class="token operator">:</span> <span class="token string">&quot;污水&quot;</span><span class="token punctuation">,</span>
-   				value<span class="token operator">:</span> <span class="token string">&quot;2&quot;</span>
-   			<span class="token punctuation">}</span><span class="token punctuation">,</span>
-   			<span class="token punctuation">{</span>
-   				type<span class="token operator">:</span> <span class="token string">&quot;排水&quot;</span><span class="token punctuation">,</span>
-   				value<span class="token operator">:</span> <span class="token string">&quot;0&quot;</span>
-   			<span class="token punctuation">}</span>
-   		<span class="token punctuation">]</span>
-   	<span class="token punctuation">}</span><span class="token punctuation">,</span>
-   	url<span class="token operator">:</span> <span class="token null">null</span>
+</code></pre></div><h3 id="安装人员选择井盖类型的接口"><a href="#安装人员选择井盖类型的接口" aria-hidden="true" class="header-anchor">#</a> 安装人员选择井盖类型的接口</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p>http://192.168.0.103:8082/wellLid/app/install/findWellLidType.do</p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li>请求参数</li></ul> <blockquote><p>无</p></blockquote> <ul><li>响应参数</li></ul> <table><thead><tr><th>参数</th> <th>类型</th> <th>说明</th></tr></thead> <tbody><tr><td>type</td> <td>String</td> <td>井盖类型</td></tr> <tr><td>value</td> <td>Integer</td> <td>井盖类型的值</td></tr> <tr><td>unit</td> <td>String</td> <td>井盖所属单位</td></tr> <tr><td>value</td> <td>String</td> <td>井盖所属单位的值</td></tr> <tr><td>code</td> <td>String</td> <td>0000表示成功</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>   <span class="token punctuation">{</span>
+       <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+       <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+       <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+           <span class="token property">&quot;umap&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;电信公司&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;自来水集团&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;市政部门&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;unit&quot;</span><span class="token operator">:</span> <span class="token string">&quot;热力公司&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3&quot;</span>
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">]</span><span class="token punctuation">,</span>
+           <span class="token property">&quot;list&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;燃气&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;1&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;污水&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;热气&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;4&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;雨水&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;5&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;通迅&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;3&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;供电&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;6&quot;</span>
+               <span class="token punctuation">}</span><span class="token punctuation">,</span>
+               <span class="token punctuation">{</span>
+                   <span class="token property">&quot;type&quot;</span><span class="token operator">:</span> <span class="token string">&quot;自来水&quot;</span><span class="token punctuation">,</span>
+                   <span class="token property">&quot;value&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0&quot;</span>
+               <span class="token punctuation">}</span>
+           <span class="token punctuation">]</span>
+       <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
    <span class="token punctuation">}</span>
 </code></pre></div></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
-    <script src="/assets/js/app.50c0b732.js" defer></script><script src="/assets/js/8.6a19c462.js" defer></script>
+    <script src="/assets/js/app.37fa9954.js" defer></script><script src="/assets/js/8.0c860a1d.js" defer></script>
   </body>
 </html>
