@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>智慧消防烟感项目API接口文档 | bd2star 的文档库</title>
+    <meta name="description" content="To be or not to be,that&#39;s a question.">
+    <link rel="icon" href="/img/logo.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.b473d3ab.css" as="style"><link rel="preload" href="/assets/js/app.2f843f96.js" as="script"><link rel="preload" href="/assets/js/16.85593d54.js" as="script"><link rel="prefetch" href="/assets/js/10.42678248.js"><link rel="prefetch" href="/assets/js/11.1f5a19dc.js"><link rel="prefetch" href="/assets/js/12.7ec6c4e7.js"><link rel="prefetch" href="/assets/js/13.c1878d6b.js"><link rel="prefetch" href="/assets/js/14.a372a06c.js"><link rel="prefetch" href="/assets/js/15.6010f592.js"><link rel="prefetch" href="/assets/js/17.3e405007.js"><link rel="prefetch" href="/assets/js/18.ba7d0bde.js"><link rel="prefetch" href="/assets/js/19.89ad5e74.js"><link rel="prefetch" href="/assets/js/2.04b03fe2.js"><link rel="prefetch" href="/assets/js/20.ccce1f73.js"><link rel="prefetch" href="/assets/js/21.c0d629c4.js"><link rel="prefetch" href="/assets/js/22.205b5fd1.js"><link rel="prefetch" href="/assets/js/23.4d621e22.js"><link rel="prefetch" href="/assets/js/24.f7177a12.js"><link rel="prefetch" href="/assets/js/25.5022ed13.js"><link rel="prefetch" href="/assets/js/26.b995bec2.js"><link rel="prefetch" href="/assets/js/27.dad995de.js"><link rel="prefetch" href="/assets/js/3.adf07a8f.js"><link rel="prefetch" href="/assets/js/4.bf0a3925.js"><link rel="prefetch" href="/assets/js/5.ac1cad0b.js"><link rel="prefetch" href="/assets/js/6.0370a852.js"><link rel="prefetch" href="/assets/js/7.40a6e762.js"><link rel="prefetch" href="/assets/js/8.891ae56d.js"><link rel="prefetch" href="/assets/js/9.d9f969c0.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.b473d3ab.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">bd2star 的文档库</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/demand/" class="nav-link">需求</a></div><div class="nav-item"><a href="/prototypeFigure/" class="nav-link">原型图</a></div><div class="nav-item"><a href="/api/" class="nav-link router-link-active">API</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/zbx931197485/article/details/84838255" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git相关知识点
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/zbx931197485/article/details/83146546" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue处理五星评分
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://www.github.com/bd2star" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><a href="/demand/" class="nav-link">需求</a></div><div class="nav-item"><a href="/prototypeFigure/" class="nav-link">原型图</a></div><div class="nav-item"><a href="/api/" class="nav-link router-link-active">API</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">博文</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/zbx931197485/article/details/84838255" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Git相关知识点
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://blog.csdn.net/zbx931197485/article/details/83146546" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Vue处理五星评分
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div><div class="nav-item"><a href="/about/" class="nav-link">关于</a></div><div class="nav-item"><a href="https://www.github.com/bd2star" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/api/" class="sidebar-link">README</a></li><li><a href="/api/室内消防烟感-通用.html" class="sidebar-link">室内消防烟感-通用</a></li><li><a href="/api/室内消防烟感-业主端.html" class="sidebar-link">室内消防烟感-业主端</a></li><li><a href="/api/室内消防烟感-安装端.html" class="active sidebar-link">室内消防烟感-安装端</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#通用说明" class="sidebar-link">通用说明:</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#①接口通用前缀" class="sidebar-link">①接口通用前缀:</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#②-接口通用返回" class="sidebar-link">② 接口通用返回:</a></li></ul></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_1-安装上报模块" class="sidebar-link">1  安装上报模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_1-1-扫描设备二维码查询设备" class="sidebar-link">1.1 扫描设备二维码查询设备</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_1-2-所属场所查询" class="sidebar-link">1.2 所属场所查询</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_1-3-监管单位查询" class="sidebar-link">1.3 监管单位查询</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_1-4-扫码后提交表单信息" class="sidebar-link">1.4 扫码后提交表单信息</a></li></ul></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_2-安装记录模块" class="sidebar-link">2  安装记录模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_2-1-安装记录列表" class="sidebar-link">2.1 安装记录列表</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_2-2-扫码加装设备回显数据" class="sidebar-link">2.2 扫码加装设备回显数据</a></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_2-3-加装设备提交表单数据" class="sidebar-link">2.3 加装设备提交表单数据</a></li></ul></li><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_3-我的模块" class="sidebar-link">3  我的模块</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/api/室内消防烟感-安装端.html#_3-1-安装场所设置" class="sidebar-link">3.1 安装场所设置</a></li></ul></li></ul></li></ul> </div> <div class="page"> <div class="content"><h1 id="智慧消防烟感项目api接口文档"><a href="#智慧消防烟感项目api接口文档" aria-hidden="true" class="header-anchor">#</a> 智慧消防烟感项目API接口文档</h1> <p>[TOC]</p> <h2 id="通用说明"><a href="#通用说明" aria-hidden="true" class="header-anchor">#</a> 通用说明:</h2> <h3 id="①接口通用前缀"><a href="#①接口通用前缀" aria-hidden="true" class="header-anchor">#</a> ①接口通用前缀:</h3> <blockquote><p>测试环境: <a href="http://192.168.0.45:80/frontInterface" target="_blank" rel="noopener noreferrer">http://192.168.0.45:80/frontInterface<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>生产环境: <a href="http://192.168.0.45:80/frontInterface" target="_blank" rel="noopener noreferrer">待定<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></blockquote> <h3 id="②-接口通用返回"><a href="#②-接口通用返回" aria-hidden="true" class="header-anchor">#</a> ② 接口通用返回:</h3> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span> // 正确码为<span class="token number">0000</span> 错误码为<span class="token number">0001</span> 
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span> // 如发生错误此处会显示相关错误信息
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span> // 所有需要的结果集都会放在该对象中
+        <span class="token property">&quot;id&quot;</span><span class="token operator">:</span> <span class="token number">194</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;token&quot;</span><span class="token operator">:</span> <span class="token string">&quot;abb37e1dd94f47289f444b365e932707&quot;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="_1-安装上报模块"><a href="#_1-安装上报模块" aria-hidden="true" class="header-anchor">#</a> 1  安装上报模块</h2> <h3 id="_1-1-扫描设备二维码查询设备"><a href="#_1-1-扫描设备二维码查询设备" aria-hidden="true" class="header-anchor">#</a> 1.1 扫描设备二维码查询设备</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/codeByImeiData</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>imei</td> <td>true</td> <td>String</td> <td>imei码</td></tr> <tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>传感器类型 0消火防1烟感器 2消防水压</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">hardwareName</td> <td style="text-align:left">String</td> <td style="text-align:left">传感器名称</td></tr> <tr><td style="text-align:left">hardwareId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">传感器设备ID</td></tr> <tr><td style="text-align:left">imei</td> <td style="text-align:left">String</td> <td style="text-align:left">imei码</td></tr> <tr><td style="text-align:left">deviceName</td> <td style="text-align:left">String</td> <td style="text-align:left">消防栓名称</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>// 正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;map&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">&quot;hardwareName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ZXH_XFM_I_QH0014&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;hardwareId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;519665839&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;imei&quot;</span><span class="token operator">:</span> <span class="token string">&quot;869976036262286&quot;</span><span class="token punctuation">,</span>
+            <span class="token property">&quot;deviceName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ZXH_XFM_I_QH0014&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+// 错误示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;imei码与传感器参数类型不匹配,传感器类型参数传递错误&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><hr> <h3 id="_1-2-所属场所查询"><a href="#_1-2-所属场所查询" aria-hidden="true" class="header-anchor">#</a> 1.2 所属场所查询</h3> <blockquote><p><strong>注意：</strong> 所属场所查询的接口和安装场所的接口是同一个</p></blockquote> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/selectAddress</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>name</td> <td>true</td> <td>String</td> <td>场所名称</td></tr> <tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>传感器类型 0消防栓 1烟感器</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">mainId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">当areaType=2非社区时，mainId为监管区域ID<br>当areaType=1社区且hardwareType=0时，mainId为楼层ID<br>当areaType=1社区且hardwareType=1时，mainId为门户ID</td></tr> <tr><td style="text-align:left">areaType</td> <td style="text-align:left">Integer</td> <td style="text-align:left">场所类型 1社区类，2非社区类</td></tr> <tr><td style="text-align:left">hardwareType</td> <td style="text-align:left">Integer</td> <td style="text-align:left">传感器类型 0消防栓 1烟感器</td></tr> <tr><td style="text-align:left">ohtherAddress</td> <td style="text-align:left">String</td> <td style="text-align:left">imei码</td></tr> <tr><td style="text-align:left">districtLeader</td> <td style="text-align:left">String</td> <td style="text-align:left">监管区域负责人</td></tr> <tr><td style="text-align:left">phoneNumber</td> <td style="text-align:left">String</td> <td style="text-align:left">监管区域负责人手机号</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>// 正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;mapList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010101&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">112</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010102&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">113</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010103&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">114</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010104&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">115</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+//搜索不到
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;mapList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+// 错误示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;参数传递错误&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><hr> <h3 id="_1-3-监管单位查询"><a href="#_1-3-监管单位查询" aria-hidden="true" class="header-anchor">#</a> 1.3 监管单位查询</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/selectRegulators</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>GET</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <blockquote><p><strong>无</strong></p></blockquote> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">companyName</td> <td style="text-align:left">String</td> <td style="text-align:left">监管单位名称</td></tr> <tr><td style="text-align:left">regulatorId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">监管单位ID</td></tr> <tr><td style="text-align:left">parentId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">父级单位ID(页面加载时，监管单位默认回显父级单位为0的监管单位)</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;mapList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;companyName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;乐陵消防单位总队&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regulatorId&quot;</span><span class="token operator">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token number">0</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;companyName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;消防单位A&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regulatorId&quot;</span><span class="token operator">:</span> <span class="token number">24</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token number">23</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;companyName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;消防单位B&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regulatorId&quot;</span><span class="token operator">:</span> <span class="token number">25</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token number">23</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;companyName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;消防单位C&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;regulatorId&quot;</span><span class="token operator">:</span> <span class="token number">26</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;parentId&quot;</span><span class="token operator">:</span> <span class="token number">23</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h3 id="_1-4-扫码后提交表单信息"><a href="#_1-4-扫码后提交表单信息" aria-hidden="true" class="header-anchor">#</a> 1.4 扫码后提交表单信息</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/insertCodeInfo</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>deviceName</td> <td>true</td> <td>String</td> <td>设备名称</td></tr> <tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>传感器类型 0消火防1烟感器 2消防水压</td></tr> <tr><td>fireKind</td> <td>true/false</td> <td>Integer</td> <td>消防栓类型 0室内, 1室外<br>当hardwareType=0时，fireKind必填</td></tr> <tr><td>hardwareId</td> <td>true</td> <td>String</td> <td>硬件传感器ID</td></tr> <tr><td>hardwareName</td> <td>true</td> <td>String</td> <td>硬件传感器名称</td></tr> <tr><td>imei</td> <td>true</td> <td>String</td> <td>imei码</td></tr> <tr><td>address</td> <td>true</td> <td>String</td> <td>详细地址</td></tr> <tr><td>longitude</td> <td>true</td> <td>String</td> <td>经度</td></tr> <tr><td>latitude</td> <td>true</td> <td>String</td> <td>纬度</td></tr> <tr><td>areaType</td> <td>true/false</td> <td>Integer</td> <td>场所类型 1社区类，2非社区类<br>当hardwareType=2时 ，areaType为null<br>areaType的值由所属场所接口决定<br></td></tr> <tr><td>mainId</td> <td>true/false</td> <td>Integer</td> <td>当areaType=2非社区时，mainId为监管区域ID<br>当areaType=1社区且hardwareType=0时,mainId为楼层ID<br>当areaType=1社区且hardwareType=1时,mainId为门户ID<br>当hardwareType=2时，mainId为null</td></tr> <tr><td>regulatorsId</td> <td>true/false</td> <td>Integer</td> <td>监管单位ID<br>当hardwareType=0时且fireKind=1时，必填<br>当hardwareType=2时，必填</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">content</td> <td style="text-align:left">String</td> <td style="text-align:left">错误提示</td></tr> <tr><td style="text-align:left">code</td> <td style="text-align:left">String</td> <td style="text-align:left">0000正确 0001错误</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>//成功提交二维码
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+
+//二维码是否使用
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;二维码已使用，请勿重复扫码!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+//错误信息
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;缺少必填参数,请检查后重试!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><hr> <h2 id="_2-安装记录模块"><a href="#_2-安装记录模块" aria-hidden="true" class="header-anchor">#</a> 2  安装记录模块</h2> <h3 id="_2-1-安装记录列表"><a href="#_2-1-安装记录列表" aria-hidden="true" class="header-anchor">#</a> 2.1 安装记录列表</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/selectDevicesList</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>GET</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>设备类型 0消火防1烟感器 2消防水压</td></tr> <tr><td>fireKind</td> <td>true</td> <td>Integer</td> <td>消防栓类型 0室内,1室外</td></tr> <tr><td>deviceName</td> <td>false</td> <td>String</td> <td>消防栓名称（搜索条件）</td></tr> <tr><td>installDate</td> <td>false</td> <td>String</td> <td>安装日期（搜索条件）</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">deviceId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">设备ID(消火栓ID,烟感器ID,消防水压ID)</td></tr> <tr><td style="text-align:left">deviceName</td> <td style="text-align:left">String</td> <td style="text-align:left">设备名称</td></tr> <tr><td style="text-align:left">addressDetail</td> <td style="text-align:left">String</td> <td style="text-align:left">详细安装地址</td></tr> <tr><td style="text-align:left">installDate</td> <td style="text-align:left">String</td> <td style="text-align:left">安装时间</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>//正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;deviceList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;addressDetail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;宏昊商务宾馆乐陵市经二纬一&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;installDate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-06-21 14:07:43&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;deviceId&quot;</span><span class="token operator">:</span> <span class="token number">37</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;deviceName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ZXH_XFM_I_QH0005&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;addressDetail&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼二单元三层010301乐陵市经十路&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;installDate&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2019-06-21 14:00:29&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;deviceId&quot;</span><span class="token operator">:</span> <span class="token number">38</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;deviceName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ZXH_XFM_I_QH0004&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+//错误示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;缺少必填参数【设备类型】,请检查后重试!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+//错误示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;缺少必填参数【消防栓类型】,请检查后重试!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h3 id="_2-2-扫码加装设备回显数据"><a href="#_2-2-扫码加装设备回显数据" aria-hidden="true" class="header-anchor">#</a> 2.2 扫码加装设备回显数据</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/selectAddDevice</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>GET</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>imei</td> <td>true</td> <td>String</td> <td>imei码</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">hardwareName</td> <td style="text-align:left">String</td> <td style="text-align:left">设备名称</td></tr> <tr><td style="text-align:left">hardwareId</td> <td style="text-align:left">String</td> <td style="text-align:left">硬件设备ID</td></tr> <tr><td style="text-align:left">imei</td> <td style="text-align:left">String</td> <td style="text-align:left">imei码</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>//正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;hardwareName&quot;</span><span class="token operator">:</span> <span class="token string">&quot;ZXH_XFM_I_QH0008&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;hardwareId&quot;</span><span class="token operator">:</span> <span class="token string">&quot;519665298&quot;</span><span class="token punctuation">,</span>
+        <span class="token property">&quot;imei&quot;</span><span class="token operator">:</span> <span class="token string">&quot;869976036262252&quot;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+//错误提示
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;该设备已存在，请勿重复扫码!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+//错误提示
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;缺少必填参数,请检查后重试!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h3 id="_2-3-加装设备提交表单数据"><a href="#_2-3-加装设备提交表单数据" aria-hidden="true" class="header-anchor">#</a> 2.3 加装设备提交表单数据</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/AddDevice</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>imei</td> <td>true</td> <td>String</td> <td>imei码</td></tr> <tr><td>hardwareName</td> <td>true/false</td> <td>String</td> <td>硬件设备名称(扫码时必填，手动添加false)</td></tr> <tr><td>hardwareId</td> <td>true/false</td> <td>String</td> <td>硬件设备ID(扫码时必填,手动添加false)</td></tr> <tr><td>deviceId</td> <td>true</td> <td>Integer</td> <td>设备ID(消火栓ID)</td></tr> <tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>设备类型 0消火防1烟感器 2消防水压</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <p>| 返回字段     | 字段类型 | 说明                       |</p> <blockquote><p><strong>无</strong></p></blockquote> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>//正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+//错误提示
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;缺少必填参数,请检查后重试!&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><hr> <h2 id="_3-我的模块"><a href="#_3-我的模块" aria-hidden="true" class="header-anchor">#</a> 3  我的模块</h2> <h3 id="_3-1-安装场所设置"><a href="#_3-1-安装场所设置" aria-hidden="true" class="header-anchor">#</a> 3.1 安装场所设置</h3> <ul><li><strong>请求URL</strong></li></ul> <blockquote><p><a href="#">/install/selectAddress</a></p></blockquote> <ul><li><strong>请求方式</strong></li></ul> <blockquote><p><strong>POST</strong></p></blockquote> <ul><li><strong>请求参数</strong></li></ul> <table><thead><tr><th>请求参数</th> <th>必选</th> <th>参数类型</th> <th>说明</th></tr></thead> <tbody><tr><td>name</td> <td>true</td> <td>String</td> <td>场所名称</td></tr> <tr><td>hardwareType</td> <td>true</td> <td>Integer</td> <td>传感器类型 0消防栓 1烟感器</td></tr></tbody></table> <ul><li><strong>返回字段</strong></li></ul> <table><thead><tr><th style="text-align:left">返回字段</th> <th style="text-align:left">字段类型</th> <th style="text-align:left">说明</th></tr></thead> <tbody><tr><td style="text-align:left">mainId</td> <td style="text-align:left">Integer</td> <td style="text-align:left">当areaType=2非社区时，mainId为监管区域ID<br>当areaType=1社区且hardwareType=0时，mainId为楼层ID<br>当areaType=1社区且hardwareType=1时，mainId为门户ID</td></tr> <tr><td style="text-align:left">areaType</td> <td style="text-align:left">Integer</td> <td style="text-align:left">场所类型 1社区类，2非社区类</td></tr> <tr><td style="text-align:left">hardwareType</td> <td style="text-align:left">Integer</td> <td style="text-align:left">传感器类型 0消防栓 1烟感器</td></tr> <tr><td style="text-align:left">ohtherAddress</td> <td style="text-align:left">String</td> <td style="text-align:left">imei码</td></tr> <tr><td style="text-align:left">districtLeader</td> <td style="text-align:left">String</td> <td style="text-align:left">监管区域负责人</td></tr> <tr><td style="text-align:left">phoneNumber</td> <td style="text-align:left">String</td> <td style="text-align:left">监管区域负责人手机号</td></tr></tbody></table> <ul><li><strong>返回示例</strong></li></ul> <div class="language-json extra-class"><pre class="language-json"><code>// 正确示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;mapList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010101&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">112</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010102&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">113</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010103&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">114</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                <span class="token property">&quot;phoneNumber&quot;</span><span class="token operator">:</span> <span class="token string">&quot;17094611495&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;areaType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;hardwareType&quot;</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;detailAddress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;何吕王社区01号楼一单元一层010104&quot;</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;mainId&quot;</span><span class="token operator">:</span> <span class="token number">115</span><span class="token punctuation">,</span>
+                <span class="token property">&quot;districtLeader&quot;</span><span class="token operator">:</span> <span class="token string">&quot;吕河山&quot;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+//搜索不到
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0000&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">&quot;mapList&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token null">null</span>
+<span class="token punctuation">}</span>
+// 错误示例
+<span class="token punctuation">{</span>
+    <span class="token property">&quot;content&quot;</span><span class="token operator">:</span> <span class="token string">&quot;参数传递错误&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;code&quot;</span><span class="token operator">:</span> <span class="token string">&quot;0001&quot;</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;result&quot;</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;url&quot;</span><span class="token operator">:</span> <span class="token string">&quot;&quot;</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><hr></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/assets/js/app.2f843f96.js" defer></script><script src="/assets/js/16.85593d54.js" defer></script>
+  </body>
+</html>
